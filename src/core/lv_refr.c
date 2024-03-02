@@ -334,14 +334,18 @@ void _lv_disp_refr_timer(lv_timer_t * tmr)
 
     lv_refr_join_area();
     refr_sync_areas();
-
+#if LV_USE_PERF_MONITOR
     perf_monitor.render_cnt++;
+#endif
     uint32_t t = lv_tick_get();
+#if LV_USE_PERF_MONITOR
     perf_monitor.in_render = 1;
+#endif
     refr_invalid_areas();
+#if LV_USE_PERF_MONITOR
     perf_monitor.in_render = 0;
     perf_monitor.render_time_sum += lv_tick_elaps(t);
-
+#endif
 skip_render:
     /*If refresh happened ...*/
     if(disp_refr->inv_p != 0) {
