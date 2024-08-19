@@ -63,6 +63,9 @@ extern "C" {
 
 #include "src/lv_api_map.h"
 
+#include "lv_mc_slider.h"
+
+
 /*-----------------
  * EXTRAS
  *----------------*/

@@ -848,7 +848,7 @@ static void theme_apply(lv_theme_t * th, lv_obj_t * obj)
 #endif
 
 #if LV_USE_SLIDER
-    else if(lv_obj_check_type(obj, &lv_slider_class)) {
+    else if(lv_obj_check_type(obj, &lv_slider_class)||lv_obj_check_type(obj, &lv_mc_slider_class)) {
         lv_obj_add_style(obj, &styles->bg_color_primary_muted, 0);
         lv_obj_add_style(obj, &styles->circle, 0);
         lv_obj_add_style(obj, &styles->outline_primary, LV_STATE_FOCUS_KEY);

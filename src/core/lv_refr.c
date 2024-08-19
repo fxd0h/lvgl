@@ -422,7 +422,7 @@ skip_render:
         lv_label_set_text_fmt(perf_label, "%"LV_PRIu32" FPS %"LV_PRIu32"%% CPU\n %"LV_PRIu32"ms (%"LV_PRIu32" | %"LV_PRIu32")",
                               fps, cpu, render_time + flush_time, render_time, flush_time);
         void sysmon_perf_observer_cb(uint32_t fps, uint32_t cpu, uint32_t render_time, uint32_t flush_time);
-        sysmon_perf_observer_cb(fps, cpu, render_time, flush_time);
+       // sysmon_perf_observer_cb(fps, cpu, render_time, flush_time);
     }
 #endif
 
